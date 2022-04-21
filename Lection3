@@ -1,0 +1,41 @@
+def task1():
+    print("Task1: ")
+    print("Please enter value 1")
+    a = int(input())
+    print("Please enter value 2")
+    b = int(input())
+    print("Please enter operation")
+    f = input()
+    switcher = {
+        '*': f"{a * b}",
+        '+': f"{a + b}",
+        '-': f"{a - b}",
+        '/': f"{a / b}"
+    }
+    print("Result: " + switcher.get(f, "Unknown operation!"))
+
+
+def task2():
+    print("Task2: ")
+    a = [0, 4, 78, 2, 1, 1, 13, 21, 34, 55, 89, 167]
+    for i in a:
+        if i < 5:
+            print(i, end=' ')
+
+
+def task3():
+    print("Task3: ")
+    for i in range(100, 0, -1):
+        if ((i >= 11) and i <= 19) or ((i % 10 >= 5) and i % 10 <= 9) or i % 10 == 0:
+            b = 'бутылoк'
+        else:
+            if i % 10 == 1:
+                b = 'бутылкa'
+            else:
+                b = 'бутылки'
+        print(f"1 бутылка упала, осталось {i} {b}")
+
+
+task1()
+task2()
+task3()
